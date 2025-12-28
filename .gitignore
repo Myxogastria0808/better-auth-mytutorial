@@ -1,2 +1,9 @@
 # Nix
 /.direnv
+
+# JavaScript
+.env
+node_modules/
+
+# Database
+/drizzle
