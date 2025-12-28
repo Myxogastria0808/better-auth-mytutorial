@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { authClient } from "./lib/auth";
+import { authClient } from "../lib/auth";
 
 const Login: FC = () => {
   const handleGitHubLogin = async () => {
