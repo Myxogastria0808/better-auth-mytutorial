@@ -17,7 +17,7 @@ const Home: FC = () => {
         });
 
         if (res.status === 401) {
-          navigate("/login", { replace: true });
+          navigate("/signin", { replace: true });
           return;
         }
 

@@ -14,12 +14,19 @@ const Signin: FC = () => {
       callbackURL: "http://localhost:5173/",
     });
   };
+  const handleGoogleSignin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "http://localhost:5173/",
+    });
+  };
 
   return (
     <div>
       <h1>Signin Page</h1>
       <button onClick={handleGitHubSignin}>Sign in with GitHub</button>
       <button onClick={handleDiscordSignin}>Sign in with Discord</button>
+      <button onClick={handleGoogleSignin}>Sign in with Google</button>
     </div>
   );
 };
