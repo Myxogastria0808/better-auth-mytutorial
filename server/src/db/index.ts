@@ -1,13 +1,11 @@
+// drizzle
 import "dotenv/config";
 import { drizzle } from "drizzle-orm/node-postgres";
 import { Pool } from "pg";
 
+// drizzle setup
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
 });
-
-const db = drizzle({ client: pool });
-
-// import { betterAuth } from "better-auth";
-
-// export const auth = betterAuth({});
+// drizzle instance
+export const db = drizzle({ client: pool });
