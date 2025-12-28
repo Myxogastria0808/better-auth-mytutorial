@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 type SessionResponse =
   | { session: unknown; user: unknown }
   | { error: "Unauthorized" };
+
 const Home: FC = () => {
   const navigate = useNavigate();
   const [data, setData] = useState<SessionResponse | null>(null);
